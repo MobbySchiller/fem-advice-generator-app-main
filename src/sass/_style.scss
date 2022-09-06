@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $dark-blue;
+}
+
+.component {
+    position: relative;
+    width: 96%;
+    max-width: 500px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    background-color: $dark-grayish-blue;
+    text-align: center;
+    z-index: 2;
+
+    &__title {
+        color: $neon-green;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &__content {
+        padding: 25px 0 10px;
+        color: $light-cyan;
+    }
+
+    &__divider {
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $neon-green;
+        background-image: url('../../public/images/icon-dice.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: box-shadow .1s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 20px 1px lighten($neon-green, 5%);
+        }
+    }
+}
+
+.invisible {
+    display: none;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    color: $light-cyan;
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: $neon-green;
+    }
+}
